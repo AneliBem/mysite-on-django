@@ -1,0 +1,115 @@
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+.head_panel {
+    background-color: #2E2E2E;
+    width: 1350px;
+    height: 60px;
+    margin: 0px;
+}
+
+header {
+  background: #333; 
+  color: white;     
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Контейнер для меню-бургера */
+.burger {
+  width: 30px;     /* ширина кнопки */
+  height: 22px;    /* висота кнопки */
+  position: relative; /* потрібно для абсолютного позиціонування ліній */
+  display: none;   /* спочатку приховано — покаже тільки на мобілці */
+  cursor: pointer; /* курсор у вигляді руки */
+  z-index: 10;     /* поверх меню */
+}
+
+/* Стилі для кожної лінії (span) */
+.burger span {
+  position: absolute;   /* абсолютне позиціонування всередині .burger */
+  height: 3px;          /* висота лінії */
+  width: 100%;          /* ширина дорівнює контейнеру */
+  background: white;    /* колір лінії */
+  left: 0;
+  transition: 0.4s;     /* плавна анімація */
+}
+
+/* Перша лінія */
+.burger span:nth-child(1) {
+  top: 0;
+}
+/* Друга лінія */
+.burger span:nth-child(2) {
+  top: 9px;
+}
+/* Третя лінія */
+.burger span:nth-child(3) {
+  top: 18px;
+}
+
+/* Анімація при відкритті меню: бургер → хрестик */
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg); /* поворот лінії */
+  top: 9px; /* зміщення в центр */
+}
+.burger.active span:nth-child(2) {
+  opacity: 0; /* ховаємо середню лінію */
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg); /* поворот іншої лінії */
+  top: 9px; /* зміщення в центр */
+}
+
+/* Меню навігації */
+.nav ul {
+  list-style: none; /* прибираємо маркери */
+  padding: 0;
+  margin: 0;
+  display: flex; /* робимо горизонтальне меню */
+  gap: 20px;     /* відстань між пунктами */
+}
+
+/* Стилі для посилань у меню */
+.nav a {
+  color: white;        /* білий текст */
+  text-decoration: none; /* без підкреслення */
+  display: block;
+  padding: 10px;
+}
+
+/* Стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+  /* Показати бургер */
+  .burger {
+    display: block;
+  }
+
+  /* Початково приховане меню */
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;      /* під шапкою */
+    left: 0;
+    background: #444;
+    width: 100%;    /* на всю ширину */
+    transition: 0.3s ease; /* плавне з’явлення */
+  }
+
+  /* Коли меню активне — показати */
+  .nav.active {
+    display: block;
+  }
+
+  /* Зробити вертикальне меню */
+  .nav ul {
+    flex-direction: column;
+  }
+
+  /* Стилі для кожного пункту */
+  .nav li {
+    border-top: 1px solid #555;
+  }
+}

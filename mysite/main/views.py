@@ -8,7 +8,7 @@ def categories(request, category_slug=None):
     if category_slug:
         category = get_object_or_404(Category, category_slug=category_slug)
         
-    return render(request, 'main/category/list.html',
+    return render(request, 'base.html',
                   {'category': category,
                    'categories': categories})
 
