@@ -5,27 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href= "{% static 'main/css/main.css' %}" type="text/css" rel="stylesheet" />
-    <script src="{% static 'main/js/main.js' %}" type="application/javascript"></script>
+   
 
     <title>{% block title %}CompTX{% endblock %}</title>
 </head>
-<body>
-  <div class="head_panel">
-    <header>
-      <div class="burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav class="nav" id="nav">
-        <ul>
-          <li><a href="#">Головна</a></li>
-          <li><a href="#">Про нас</a></li>
-          <li><a href="#">Послуги</a></li>
-          <li><a href="#">Контакти</a></li>
-        </ul>
-      </nav>
-    </header>  
-  </div>  
+<body> 
+  
+  {% include 'includes/navbar.html' %}
+  <script src="{% static 'main/js/main.js' %}" type="application/javascript"></script>
 </body>
 </html>
