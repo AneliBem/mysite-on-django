@@ -9,8 +9,13 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.burger-button{
+  background-color: #1a1a1a;
+  border: none;
+}
+
 /* Панель */
-.head_panel {
+.nav-bar {
   background-color: #1a1a1a;
   color: white;
   padding: 10px 20px;
@@ -42,6 +47,7 @@ body {
   height: 21px;
   position: relative;
   z-index: 1000;
+
 }
 
 .burger span {
@@ -71,7 +77,7 @@ body {
 }
 
 /* Адаптивність */
-@media (min-width: 768px) {
+@media (min-width: 1400px) {
   .burger {
     display: none;
   }
