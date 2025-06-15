@@ -3,21 +3,27 @@
 {% block content %}
 
 <header class="nav-bar">
-  <button>
-      <div class="burger" id="burger">
-          <span></span>
-          <span></span>
-          <span></span>
-      </div>
-      <nav class="nav" id="nav">
-        <ul>
-          <li><a href="#">Головна</a></li>
-          <li><a href="#">Про нас</a></li>
-          <li><a href="#">Послуги</a></li>
-          <li><a href="#">Контакти</a></li>
+  <div class="burger-button" id="burger-button">
+    <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+  </div>
+
+  <nav class="nav" id="nav">
+    <ul class="accordion" id="accordion">
+      <li><a href="#">Головна</a></li>
+      <li>  
+        <a href="#" class="link" id="submenu-toggle">Категорії</a>
+        <ul class="submenu" id="submenu">
+          <li><a href="#">Комп'ютери</a></li>
         </ul>
-      </nav>
-  </button>
+      </li>
+      <li><a href="#">Послуги</a></li>
+      <li><a href="#">Контакти</a></li>
+    </ul>
+  </nav>
 </header>
 
 {% endblock %}

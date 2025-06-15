@@ -9,6 +9,8 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
+
 .burger-button{
   background-color: #1a1a1a;
   border: none;
@@ -76,22 +78,51 @@ body {
   display: block;
 }
 
-/* Адаптивність */
-@media (min-width: 1400px) {
-  .burger {
-    display: none;
-  }
+/* .accordion {
+  width: 100%;
+}
+.accordion .link {
+  display: block;
+} */
 
-  .nav {
-    display: block;
-  }
+/* .link {
+  background: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+}
 
-  .nav ul {
-    display: flex;
-    gap: 20px;
-  }
 
-  .nav li {
-    margin: 0;
-  }
+.accordion li:last-child .link { border-bottom: 0; }
+
+.submenu {
+  display: none;  
+  padding: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+
+.submenu.open {
+  display: block;
+}*/
+
+.link {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+.submenu {
+  display: none;
+  background-color: #333;
+  padding: 10px;
+}
+
+.submenu.open {
+  display: block;
 }
