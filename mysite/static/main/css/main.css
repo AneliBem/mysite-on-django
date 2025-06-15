@@ -78,49 +78,18 @@ body {
   display: block;
 }
 
-/* .accordion {
-  width: 100%;
-}
-.accordion .link {
-  display: block;
-} */
-
-/* .link {
-  background: none;
-  color: white;
-  font-size: 18px;
-  padding: 10px;
-  text-align: left;
-  width: 100%;
-}
-
-
-.accordion li:last-child .link { border-bottom: 0; }
-
-.submenu {
-  display: none;  
-  padding: 10px;
-  position: relative;
-  z-index: 10;
-}
-
-
-.submenu.open {
-  display: block;
-}*/
 
 .link {
   display: block;
-  padding: 10px;
   color: white;
   text-decoration: none;
   cursor: pointer;
 } 
 
-.submenu {
+.submenu { 
   display: none;
   background-color: #333;
-  padding: 10px;
+  padding: 5px;
 }
 
 .submenu.open {
