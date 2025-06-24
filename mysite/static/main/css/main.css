@@ -9,22 +9,24 @@ body {
   font-family: Arial, sans-serif;
 }
 
-
-
-.burger-button{
+.burger-button {
+  width: fit-content;
   background-color: #1a1a1a;
   border: none;
+  padding: 15px 20px;
 }
 
 /* Панель */
 .nav-bar {
+  display: flex;
   background-color: #1a1a1a;
   color: white;
-  padding: 10px 20px;
+  padding: 0px 0px;
 }
 
 /* Навігація */
 .nav {
+  padding: 0;
   display: none;
 }
 
@@ -78,7 +80,6 @@ body {
   display: block;
 }
 
-
 .link {
   display: block;
   color: white;
@@ -94,4 +95,11 @@ body {
 
 .submenu.open {
   display: block;
+}
+
+.logo-button {
+  display: block;
+  width: 191px;
+  height: 60px;
+  padding: 0px;
 }
